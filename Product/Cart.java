@@ -13,10 +13,12 @@ import java.util.ArrayList;
  */
 public class Cart implements Icart{
   
-    //ArrayList<Product> cart = new ArrayList<>();
+    double totalPrice = 0;
+    public ArrayList<Product> cart;
     
     public Cart()
     {
+        this.cart = new ArrayList<>();
         
     }
     
@@ -24,6 +26,7 @@ public class Cart implements Icart{
     public void addProduct(Product p)
     {
         cart.add(p);
+        totalPrice += p.getPrice();
     }
     
     @Override
@@ -36,5 +39,15 @@ public class Cart implements Icart{
     public String getString()
     {
         return cart.toString();
+    }
+
+    @Override
+    public double getPrice() {
+        return totalPrice;
+    }
+
+    @Override
+    public Product getProduct(int i) {
+        return cart.get(i);
     }
 }

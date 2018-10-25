@@ -5,17 +5,24 @@
  */
 package Product;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Mark
  */
 public interface Icart {
     
-    ArrayList<Product> cart = new ArrayList<>();
+    
+    
     public void addProduct(Product p);
     public void removeProduct(Product p);
+
+    /**
+     *
+     * @param i
+     * @return
+     */
+    public Product getProduct(int i);
     public String getString();
+    public double getPrice();
     
 }
