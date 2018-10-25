@@ -5,16 +5,12 @@
  */
 package User;
 
-import Product.Cart;
-import Product.Icart;
-import Product.Product;
-
 /**
  *
  * @author Mark
  */
-public abstract class User implements Icart {
-    Cart userCart = new Cart();
+public abstract class User {
+    
     String username;
     
     public String getUsername()
@@ -26,24 +22,5 @@ public abstract class User implements Icart {
     {
         this.username = username;
     }
-    
-    @Override
-    public void addProduct(Product p)
-    {
-        userCart.addProduct(p);
-    }
-    
-    @Override
-    public void removeProduct(Product p)
-    {
-        userCart.removeProduct(p);
-    }
-    
-    
-    @Override
-    public String getString()
-    {
-        return userCart.getString();
-    }
-    
+ 
 }
