@@ -5,9 +5,9 @@
  */
 package User;
 
-import Product.Cart;
-import Product.Icart;
-import Product.Product;
+import Cart.Cart;
+import Cart.Icart;
+import Cart.Product;
 
 /**
  *
@@ -15,7 +15,7 @@ import Product.Product;
  */
 public class Customer extends User implements Icart {
     
-    Cart userCart = new Cart();
+    public Cart userCart = new Cart();
     
     public Customer(String username){
         this.username = username;
@@ -45,6 +45,11 @@ public class Customer extends User implements Icart {
     @Override
     public Product getProduct(int i) {
         return userCart.getProduct(i);
+    }
+
+    @Override
+    public int getNumItems() {
+        return userCart.getNumItems();
     }
     
 }

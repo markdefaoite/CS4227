@@ -5,8 +5,8 @@
  */
 package User;
 
-import Product.CoarseSandFactory;
-import Product.Product;
+import Cart.CoarseSandFactory;
+import Cart.Product;
 
 /**
  *
